@@ -25,9 +25,10 @@ class Images:
                 for pixel in pix:
                     #hexval = hex(str(pixel)[0]) + hex(str(pixel)[1])[:1] + hex(str(pixel)[2])[:1]
                     #act_hi.append((int(hexval,16))/100000.0)
-                    act.append(pixel[0]/255.0) 
-                    act.append(pixel[1]/255.0) 
-                    act.append(pixel[2]/255.0) 
+                    #act.append(pixel[0]/255.0) 
+                    #act.append(pixel[1]/255.0) 
+                    #act.append(pixel[2]/255.0) 
+                    act.append(pixel/255.0)
                 if random.randint(0,100) < 75:
                     self.trainingActivations.append((act, name))
                 else:

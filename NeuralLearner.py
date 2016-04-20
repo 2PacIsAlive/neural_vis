@@ -13,24 +13,21 @@ class NeuralLearner:
             self.model = MLPClassifier(algorithm = 'sgd', 
                                        shuffle = True,
                                        learning_rate = 'constant',
-                                       hidden_layer_sizes=(200,100,100),
                                        momentum = .9,
                                        nesterovs_momentum = True, 
                                        learning_rate_init = 0.2)
        
         def Fit(self):
-            arr = [pix for pix, breed in self.data.trainingActivations]
+            arr = [pix for pix, label in self.data.trainingActivations]
             self.model.fit(arr, self.training_expected)
             return self.model.predict(arr)
 
         def Predict(self):
-            arr = [pix for pix, breed in self.data.testingActivations]
+            arr = [pix for pix, label in self.data.testingActivations]
             return self.model.predict(arr)
 
 net = NeuralLearner()
 accuracy = net.Fit()
-guess = net.Predict()
-'''
 print "TRAINING"
 for i in range(len(accuracy)):
     print accuracy[i], net.training_expected[i]
@@ -38,4 +35,3 @@ print "TESTING"
 guess = net.Predict()
 for i in range(len(guess)):
     print guess[i], net.testing_expected[i]
-'''
