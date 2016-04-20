@@ -30,3 +30,10 @@ class Images():
 			from PIL import Image
 			im = Image.fromarray(im)
 			im.save(filename)
+
+def main():
+    imgs = Images()
+    for index in range(imgs.images["data"])-1):
+        imgs.saveImage(index)
+
+if __name__=="__main__": main()
