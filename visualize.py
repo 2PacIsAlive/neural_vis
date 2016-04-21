@@ -12,6 +12,4 @@ for file_ in glob('images/*.npy'):
         weights[file_] = data
     
 for data in weights:
-    plt.plot(weights[data][0] - weights[data][1], weights[data][0] - weights[data][1])
-    plt.show()
-    break # only do one
+    print weights[data][0].shape()
