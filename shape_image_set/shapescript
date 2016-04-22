@@ -1,0 +1,33 @@
+#!/bin/bash
+
+N_IMAGES=1000
+FONTS=1
+SQUARE=0
+TRIANGLE=0
+CIRCLE=0
+echo $TRIANGLE
+# echo each element in array 
+# for loop
+for (( i=0;i<$N_IMAGES;i++)); do
+	r=$(printf "%0*d" 4 $i)
+	if [ $TRIANGLE -ne 0 ]
+	then
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=3 -o triangle$r.png
+	fi 
+	if [ $SQUARE -ne 0 ]
+	then
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=4 -o square$r.png
+	fi
+	if [ $CIRCLE -ne 0 ]
+	then
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=128 -o circle$r.png
+	fi
+	if [ $FONTS -ne 0 ]
+	then
+	letters=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+	for (( j=0;j<26;j++)); do
+	l=${letters[$j]} 
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=128 -D s=0 -D l='"'$l'"' -o letters/$l'_default'$r.png
+	done
+	fi
+done
