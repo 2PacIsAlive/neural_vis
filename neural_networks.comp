@@ -1,18 +1,19 @@
 Composition {
-	CurrentTime = 8603,
-	RenderRange = { 0, 10000 },
-	GlobalRange = { 0, 10000 },
-	CurrentID = 1033,
+	CurrentTime = 10214,
+	RenderRange = { 0, 12000 },
+	GlobalRange = { 0, 12000 },
+	CurrentID = 1047,
 	MotionBlur = false,
 	Version = "Fusion 8.0 build 23",
 	SavedOutputs = 1,
 	HeldTools = 0,
 	DisabledTools = 0,
 	LockedTools = 0,
+	AudioFilename = "/Users/jjolton/Dropbox/shape_image_set/A.W.A.R.M. Signal.wav",
 	AudioOffset = 0,
 	Resumable = true,
 	OutputClips = {
-		"/Users/jjolton/neural_vis/test3.mov"
+		"/Users/jjolton/neural_vis/group_12_neural_network_visualization.mov"
 	},
 	Tools = {
 		Loader1 = Loader {
@@ -1235,31 +1236,57 @@ Composition {
 			},
 			ViewInfo = OperatorInfo { Pos = { 6245.58, 127.132 } },
 		},
-		Saver1 = Saver {
-			Inputs = {
-				ProcessWhenBlendIs00 = Input { Value = 0, },
-				Clip = Input {
-					Value = Clip {
-						Filename = "/Users/jjolton/neural_vis/test3.mov",
-						FormatID = "QuickTimeMovies",
-						Length = 0,
-						Multiframe = true,
-						Saving = true,
-						TrimIn = 0,
-						ExtendFirst = 0,
-						ExtendLast = 0,
-						Loop = 1,
-						AspectMode = 0,
-						Depth = 0,
-						GlobalStart = -2000000000,
-						GlobalEnd = 0
-					},
-				},
-				OutputFormat = Input { Value = FuID { "QuickTimeMovies" }, },
-				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-				["QuickTimeMovies.Compression"] = Input { Value = FuID { "H.264_avc1" }, },
+		Loader39 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/Dropbox/shape_image_set/running_sim/backup/00001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 755,
+					LengthSetManually = true,
+					TrimIn = 4,
+					TrimOut = 23,
+					ExtendFirst = 200,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 8781,
+					GlobalEnd = 9000
+				}
 			},
-			ViewInfo = OperatorInfo { Pos = { 4464.18, -229.103 } },
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6372.98, 131.895 } },
+		},
+		Loader40 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/neural_vis/finalfinalplate/0001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 1800,
+					LengthSetManually = true,
+					TrimIn = 0,
+					TrimOut = 1799,
+					ExtendFirst = 0,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 9140,
+					GlobalEnd = 10939
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6608.72, 146.182 } },
 		},
 		Transform1 = Transform {
 			Inputs = {
@@ -1297,7 +1324,7 @@ Composition {
 		},
 		Background1 = Background {
 			Inputs = {
-				GlobalOut = Input { Value = 10000, },
+				GlobalOut = Input { Value = 12000, },
 				Width = Input { Value = 1920, },
 				Height = Input { Value = 1080, },
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
@@ -2846,6 +2873,52 @@ Composition {
 			},
 			ViewInfo = OperatorInfo { Pos = { 2101, 109 } },
 		},
+		Text37 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 820, },
+				GlobalOut = Input { Value = 890, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.5, 0.269759450171821 }, },
+				Size = Input { Value = 0.06, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "These are the synapses\nbetween two 10x10 layers", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 2101.09, 181.9 } },
+		},
+		Merge106 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge24",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text37",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 2101.09, 142.61 } },
+		},
 		Text15 = TextPlus {
 			ExtentSet = true,
 			Inputs = {
@@ -2879,7 +2952,7 @@ Composition {
 		Merge40 = Merge {
 			Inputs = {
 				Background = Input {
-					SourceOp = "Merge24",
+					SourceOp = "Merge106",
 					Source = "Output",
 				},
 				Foreground = Input {
@@ -5601,7 +5674,7 @@ Composition {
 			ExtentSet = true,
 			Inputs = {
 				GlobalIn = Input { Value = 8570, },
-				GlobalOut = Input { Value = 8770, },
+				GlobalOut = Input { Value = 8760, },
 				Width = Input { Value = 1920, },
 				Height = Input { Value = 1080, },
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
@@ -5644,16 +5717,213 @@ Composition {
 			ViewInfo = OperatorInfo { Pos = { 6261.06, 239.049 } },
 		},
 		Merge103 = Merge {
-			CtrlWZoom = false,
 			Inputs = {
 				Background = Input {
 					SourceOp = "Merge99_1_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader39",
 					Source = "Output",
 				},
 				ApplyMode = Input { Value = FuID { "Screen" }, },
 				PerformDepthMerge = Input { Value = 0, },
 			},
 			ViewInfo = OperatorInfo { Pos = { 6376.55, 193.806 } },
+		},
+		Text35_1_1_1_1_1 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 8790, },
+				GlobalOut = Input { Value = 8990, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.532882011605416, 0.276632302405498 }, },
+				Size = Input { Value = 0.06, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "The network selects the most \nstrongly activated output neuron\nas the letter it \"sees\"", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 6383.69, 290.245 } },
+		},
+		Merge99_1_1_1_1_1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge103",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text35_1_1_1_1_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6382.51, 245.002 } },
+		},
+		Text36 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 9120, },
+				GlobalOut = Input { Value = 9120, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "The network learns to \nrecognize the 26 letters \nwith less than 1% error", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 6487.28, 140.229 } },
+		},
+		Merge104 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge99_1_1_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text36",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6486.09, 199.759 } },
+		},
+		Merge105 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge104",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader40",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6606.34, 198.569 } },
+		},
+		Text38 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 10960, },
+				GlobalOut = Input { Value = 11500, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.492045454545455, 0.516460905349794 }, },
+				Size = Input { Value = 0.06, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "Thanks for watching!\n\nA special thanks goes out to \nthe instructors of CSCI-4830 \nat CU Boulder\n\nMusic Title: A.W.A.R.M. Signal\nMusic Author: P C III\nMusic Source: www.pipechoir.com\nMusic License: Creative Commons \nAttribution 4.0", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 6723.02, 144.991 } },
+		},
+		Merge107 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge105",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text38",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6720.64, 197.378 } },
+		},
+		Saver1 = Saver {
+			CtrlWZoom = false,
+			Inputs = {
+				ProcessWhenBlendIs00 = Input { Value = 0, },
+				Clip = Input {
+					Value = Clip {
+						Filename = "/Users/jjolton/neural_vis/group_12_neural_network_visualization.mov",
+						FormatID = "QuickTimeMovies",
+						Length = 0,
+						Saving = true,
+						TrimIn = 0,
+						ExtendFirst = 0,
+						ExtendLast = 0,
+						Loop = 1,
+						AspectMode = 0,
+						Depth = 0,
+						GlobalStart = -2000000000,
+						GlobalEnd = 0
+					},
+				},
+				OutputFormat = Input { Value = FuID { "QuickTimeMovies" }, },
+				SoundFilename = Input { Value = "/Users/jjolton/Dropbox/shape_image_set/A.W.A.R.M. Signal.wav", },
+				LeftAudio = Input {
+					SourceOp = "Left",
+					Source = "Data",
+				},
+				RightAudio = Input {
+					SourceOp = "Right",
+					Source = "Data",
+				},
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Input = Input {
+					SourceOp = "Merge107",
+					Source = "Output",
+				},
+				["QuickTimeMovies.Compression"] = Input { Value = FuID { "H.264_avc1" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6832.56, 194.997 } },
+		},
+		Left = AudioDisplay {
+		},
+		Right = AudioDisplay {
 		}
 	},
 	Views = {
@@ -5687,7 +5957,7 @@ Composition {
 						Direction = "Horizontal",
 						PipeStyle = "Direct",
 						Scale = 0.839908,
-						Offset = { -5888.4, -74.7454 }
+						Offset = { -6147.96, -79.5077 }
 					},
 					Timeline = TimelineView {
 						TreeControlState = {
@@ -5790,7 +6060,8 @@ Composition {
 				},
 			},
 			FrameFormat = {
-				GuideRatio = 1.77777777777778,
+				Rate = 25,
+				GuideRatio = 1.77778,
 			},
 			LastFile = "/Users/jjolton/neural_vis/data/gradients/images_coef/input_hidden_1.png",
 			PolyKeyListDlg = {
@@ -5800,7 +6071,7 @@ Composition {
 				}
 			},
 			Unsorted = {
-				GlobalEnd = 10000,
+				GlobalEnd = 12000,
 				RenderSettings = {
 					Configs = {
 						Final = {
