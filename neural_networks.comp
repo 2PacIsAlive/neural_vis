@@ -1,8 +1,8 @@
 Composition {
-	CurrentTime = 6460,
-	RenderRange = { 0, 7000 },
-	GlobalRange = { 0, 7000 },
-	CurrentID = 990,
+	CurrentTime = 8603,
+	RenderRange = { 0, 10000 },
+	GlobalRange = { 0, 10000 },
+	CurrentID = 1033,
 	MotionBlur = false,
 	Version = "Fusion 8.0 build 23",
 	SavedOutputs = 1,
@@ -15,6 +15,83 @@ Composition {
 		"/Users/jjolton/neural_vis/test3.mov"
 	},
 	Tools = {
+		Loader1 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/neural_vis/data/gradients/intercept/hidden_output_1.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 500,
+					LengthSetManually = true,
+					TrimIn = 0,
+					TrimOut = 499,
+					ExtendFirst = 0,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 0,
+					GlobalEnd = 499
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 2484.36, 531.336 } },
+		},
+		Loader2 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/neural_vis/data/gradients/images_coef/hidden_output_1.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 500,
+					LengthSetManually = true,
+					TrimIn = 0,
+					TrimOut = 499,
+					ExtendFirst = 0,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 0,
+					GlobalEnd = 499
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 2483.36, 494.336 } },
+		},
+		Loader3 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/neural_vis/gradient_ascent_images/generated/0.png",
+					FormatID = "PNGFormat",
+					Length = 500,
+					LengthSetManually = true,
+					TrimIn = 0,
+					TrimOut = 499,
+					ExtendFirst = 0,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 0,
+					GlobalEnd = 499
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 2878.36, 563.336 } },
+		},
 		Loader5 = Loader {
 			Clips = {
 				Clip {
@@ -969,68 +1046,16 @@ Composition {
 					AspectMode = 0,
 					Depth = 0,
 					TimeCode = 0,
-					GlobalStart = 0,
-					GlobalEnd = 499
+					GlobalStart = 6560,
+					GlobalEnd = 7059
 				}
 			},
 			Inputs = {
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 			},
-			ViewInfo = OperatorInfo { Pos = { 2996, 328 } },
+			ViewInfo = OperatorInfo { Pos = { 5387.04, 105.364 } },
 		},
-		Loader1 = Loader {
-			Clips = {
-				Clip {
-					ID = "Clip1",
-					Filename = "/Users/jjolton/neural_vis/data/gradients/intercept/hidden_output_1.png",
-					FormatID = "PNGFormat",
-					StartFrame = 1,
-					Length = 500,
-					LengthSetManually = true,
-					TrimIn = 0,
-					TrimOut = 499,
-					ExtendFirst = 0,
-					ExtendLast = 0,
-					Loop = 1,
-					AspectMode = 0,
-					Depth = 0,
-					TimeCode = 0,
-					GlobalStart = 0,
-					GlobalEnd = 499
-				}
-			},
-			Inputs = {
-				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-			},
-			ViewInfo = OperatorInfo { Pos = { 2484.36, 531.336 } },
-		},
-		Loader2 = Loader {
-			Clips = {
-				Clip {
-					ID = "Clip1",
-					Filename = "/Users/jjolton/neural_vis/data/gradients/images_coef/hidden_output_1.png",
-					FormatID = "PNGFormat",
-					StartFrame = 1,
-					Length = 500,
-					LengthSetManually = true,
-					TrimIn = 0,
-					TrimOut = 499,
-					ExtendFirst = 0,
-					ExtendLast = 0,
-					Loop = 1,
-					AspectMode = 0,
-					Depth = 0,
-					TimeCode = 0,
-					GlobalStart = 0,
-					GlobalEnd = 499
-				}
-			},
-			Inputs = {
-				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-			},
-			ViewInfo = OperatorInfo { Pos = { 2483.36, 494.336 } },
-		},
-		Loader3 = Loader {
+		Loader4_1 = Loader {
 			Clips = {
 				Clip {
 					ID = "Clip1",
@@ -1046,18 +1071,233 @@ Composition {
 					AspectMode = 0,
 					Depth = 0,
 					TimeCode = 0,
-					GlobalStart = 0,
-					GlobalEnd = 499
+					GlobalStart = 7080,
+					GlobalEnd = 7579
 				}
 			},
 			Inputs = {
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 			},
-			ViewInfo = OperatorInfo { Pos = { 2878.36, 563.336 } },
+			ViewInfo = OperatorInfo { Pos = { 5512.17, 65.2206 } },
+		},
+		Loader34 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/neural_vis/gradient_ascent_images/letters/b.png",
+					FormatID = "PNGFormat",
+					StartFrame = -1,
+					LengthSetManually = true,
+					TrimIn = 0,
+					TrimOut = 0,
+					ExtendFirst = 0,
+					ExtendLast = 499,
+					Loop = 0,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 7080,
+					GlobalEnd = 7579
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5626.94, 71.1737 } },
+		},
+		Loader35 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/Dropbox/shape_image_set/running_sim/backup/00001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 755,
+					LengthSetManually = true,
+					TrimIn = 0,
+					TrimOut = 0,
+					ExtendFirst = 200,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 7740,
+					GlobalEnd = 7940
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5790.78, 148.563 } },
+		},
+		Loader36 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/Dropbox/shape_image_set/running_sim/backup/00001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 755,
+					LengthSetManually = true,
+					TrimIn = 1,
+					TrimOut = 1,
+					ExtendFirst = 199,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 7941,
+					GlobalEnd = 8140
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5897.93, 144.991 } },
+		},
+		Loader36_1 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/Dropbox/shape_image_set/running_sim/backup/00001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 755,
+					LengthSetManually = true,
+					TrimIn = 1,
+					TrimOut = 1,
+					ExtendFirst = 199,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 8141,
+					GlobalEnd = 8340
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6022.94, 134.276 } },
+		},
+		Loader37 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/Dropbox/shape_image_set/running_sim/backup/00001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 755,
+					LengthSetManually = true,
+					TrimIn = 2,
+					TrimOut = 21,
+					ExtendFirst = 200,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 8341,
+					GlobalEnd = 8560
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6126.52, 128.323 } },
+		},
+		Loader38 = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "/Users/jjolton/Dropbox/shape_image_set/running_sim/backup/00001.png",
+					FormatID = "PNGFormat",
+					StartFrame = 1,
+					Length = 755,
+					LengthSetManually = true,
+					TrimIn = 3,
+					TrimOut = 22,
+					ExtendFirst = 200,
+					ExtendLast = 0,
+					Loop = 1,
+					AspectMode = 0,
+					Depth = 0,
+					TimeCode = 0,
+					GlobalStart = 8561,
+					GlobalEnd = 8780
+				}
+			},
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6245.58, 127.132 } },
+		},
+		Saver1 = Saver {
+			Inputs = {
+				ProcessWhenBlendIs00 = Input { Value = 0, },
+				Clip = Input {
+					Value = Clip {
+						Filename = "/Users/jjolton/neural_vis/test3.mov",
+						FormatID = "QuickTimeMovies",
+						Length = 0,
+						Multiframe = true,
+						Saving = true,
+						TrimIn = 0,
+						ExtendFirst = 0,
+						ExtendLast = 0,
+						Loop = 1,
+						AspectMode = 0,
+						Depth = 0,
+						GlobalStart = -2000000000,
+						GlobalEnd = 0
+					},
+				},
+				OutputFormat = Input { Value = FuID { "QuickTimeMovies" }, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				["QuickTimeMovies.Compression"] = Input { Value = FuID { "H.264_avc1" }, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 4464.18, -229.103 } },
+		},
+		Transform1 = Transform {
+			Inputs = {
+				Input = Input {
+					SourceOp = "Loader1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 2604.36, 531.336 } },
+		},
+		Transform2 = Transform {
+			Inputs = {
+				Angle = Input { Value = -90.0636962503638, },
+				Input = Input {
+					SourceOp = "Loader2",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 2604.36, 494.336 } },
+		},
+		Merge1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Transform1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Transform2",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 2729.37, 529.999 } },
 		},
 		Background1 = Background {
 			Inputs = {
-				GlobalOut = Input { Value = 7000, },
+				GlobalOut = Input { Value = 10000, },
 				Width = Input { Value = 1920, },
 				Height = Input { Value = 1080, },
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
@@ -4800,7 +5040,7 @@ Composition {
 					},
 				},
 			},
-			ViewInfo = OperatorInfo { Pos = { 5202.7, 146.328 } },
+			ViewInfo = OperatorInfo { Pos = { 5170.31, 146.328 } },
 		},
 		Merge90 = Merge {
 			Inputs = {
@@ -4865,69 +5105,8 @@ Composition {
 			},
 			ViewInfo = OperatorInfo { Pos = { 5201.43, 228.333 } },
 		},
-		Saver1 = Saver {
-			Inputs = {
-				ProcessWhenBlendIs00 = Input { Value = 0, },
-				Clip = Input {
-					Value = Clip {
-						Filename = "/Users/jjolton/neural_vis/test3.mov",
-						FormatID = "QuickTimeMovies",
-						Length = 0,
-						Multiframe = true,
-						Saving = true,
-						TrimIn = 0,
-						ExtendFirst = 0,
-						ExtendLast = 0,
-						Loop = 1,
-						AspectMode = 0,
-						Depth = 0,
-						GlobalStart = -2000000000,
-						GlobalEnd = 0
-					},
-				},
-				OutputFormat = Input { Value = FuID { "QuickTimeMovies" }, },
-				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-				["QuickTimeMovies.Compression"] = Input { Value = FuID { "H.264_avc1" }, },
-			},
-			ViewInfo = OperatorInfo { Pos = { 4464.18, -229.103 } },
-		},
-		Transform1 = Transform {
-			Inputs = {
-				Input = Input {
-					SourceOp = "Loader1",
-					Source = "Output",
-				},
-			},
-			ViewInfo = OperatorInfo { Pos = { 2604.36, 531.336 } },
-		},
-		Transform2 = Transform {
-			Inputs = {
-				Angle = Input { Value = -90.0636962503638, },
-				Input = Input {
-					SourceOp = "Loader2",
-					Source = "Output",
-				},
-			},
-			ViewInfo = OperatorInfo { Pos = { 2604.36, 494.336 } },
-		},
-		Merge1 = Merge {
-			Inputs = {
-				Background = Input {
-					SourceOp = "Transform1",
-					Source = "Output",
-				},
-				Foreground = Input {
-					SourceOp = "Transform2",
-					Source = "Output",
-				},
-				ApplyMode = Input { Value = FuID { "Screen" }, },
-				PerformDepthMerge = Input { Value = 0, },
-			},
-			ViewInfo = OperatorInfo { Pos = { 2729.37, 529.999 } },
-		},
 		Text32 = TextPlus {
 			ExtentSet = true,
-			CtrlWZoom = false,
 			Inputs = {
 				GlobalIn = Input { Value = 6420, },
 				GlobalOut = Input { Value = 6540, },
@@ -4935,7 +5114,7 @@ Composition {
 				Height = Input { Value = 1080, },
 				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 				Font = Input { Value = "Arial", },
-				StyledText = Input { Value = "We can even use them to \niteratively update the pixels \nin our images", },
+				StyledText = Input { Value = "Using an algorithm called \ngradient ascent,\nwe can even use them to \niteratively update the pixels \nin our images", },
 				Style = Input { Value = "Bold", },
 				ManualFontKerningPlacement = Input {
 					Value = StyledText {
@@ -4953,7 +5132,7 @@ Composition {
 					},
 				},
 			},
-			ViewInfo = OperatorInfo { Pos = { 5315.73, 143.8 } },
+			ViewInfo = OperatorInfo { Pos = { 5280.31, 143.8 } },
 		},
 		Merge92 = Merge {
 			Inputs = {
@@ -4969,6 +5148,512 @@ Composition {
 				PerformDepthMerge = Input { Value = 0, },
 			},
 			ViewInfo = OperatorInfo { Pos = { 5314.53, 185.471 } },
+		},
+		Resize4 = BetterResize {
+			Inputs = {
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				Input = Input {
+					SourceOp = "Loader4",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5388.65, 141.419 } },
+		},
+		Merge93 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge92",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Resize4",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5427.65, 185.471 } },
+		},
+		Transform12 = Transform {
+			Inputs = {
+				Center = Input { Value = { 1.27988394584139, 0.900824742268042 }, },
+				Input = Input {
+					SourceOp = "Loader4_1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5499.8, 92.6046 } },
+		},
+		Resize4_1 = BetterResize {
+			Inputs = {
+				Width = Input { Value = 500, },
+				Height = Input { Value = 500, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				Input = Input {
+					SourceOp = "Transform12",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5490.28, 125.605 } },
+		},
+		Transform13 = Transform {
+			Inputs = {
+				Center = Input { Value = { -0.339303675048356, 0.908247422680412 }, },
+				Input = Input {
+					SourceOp = "Loader34",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5609.8, 105.701 } },
+		},
+		Resize5 = BetterResize {
+			Inputs = {
+				Width = Input { Value = 500, },
+				Height = Input { Value = 500, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				Input = Input {
+					SourceOp = "Transform13",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5600.28, 133.085 } },
+		},
+		Merge95 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Resize4_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Resize5",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5537.18, 166.085 } },
+		},
+		Merge94 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge93",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Merge95",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5537.18, 199.085 } },
+		},
+		Text33 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 7020, },
+				GlobalOut = Input { Value = 7560, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.5, 0.238831615120275 }, },
+				Size = Input { Value = 0.065, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "The final representation\non the right\nis what the network thinks\na \"b\" looks like", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5524.08, 299.77 } },
+		},
+		Merge96 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge94",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text33",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5540.75, 250.955 } },
+		},
+		Text34 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 7600, },
+				GlobalOut = Input { Value = 7720, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "The next sequence shows\nthe network learning", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5664.57, 159.279 } },
+		},
+		Merge97 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge96",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text34",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5661, 193.806 } },
+		},
+		Merge98 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge97",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader35",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5783.63, 196.187 } },
+		},
+		Text35 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 7740, },
+				GlobalOut = Input { Value = 7920, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.5, 0.668384879725086 }, },
+				Size = Input { Value = 0.065, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "This it the input layer, each \nneuron is mapped to a pixel\nin the input image", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5777.68, 284.292 } },
+		},
+		Merge99 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge98",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text35",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5782.44, 246.193 } },
+		},
+		Merge100 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge99",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader36",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5900.31, 194.997 } },
+		},
+		Text35_1 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 7960, },
+				GlobalOut = Input { Value = 8120, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.5, 0.668384879725086 }, },
+				Size = Input { Value = 0.065, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "These are the synapses between\nthe active input neurons and the\nhidden layer\n", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 5896.73, 293.817 } },
+		},
+		Merge99_1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge100",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text35_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 5901.5, 255.718 } },
+		},
+		Merge100_1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge99_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader36_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6025.33, 184.281 } },
+		},
+		Text35_1_1 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 8141, },
+				GlobalOut = Input { Value = 8320, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.52321083172147, 0.843642611683849 }, },
+				Size = Input { Value = 0.06, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "Negative weights are red, positive \nweights are green, magnitude is mapped to \nopacity and radius", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 6024.13, 292.626 } },
+		},
+		Merge99_1_1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge100_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text35_1_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6026.52, 245.002 } },
+		},
+		Merge101 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge99_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader37",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6140.81, 185.472 } },
+		},
+		Text35_1_1_1 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 8350, },
+				GlobalOut = Input { Value = 8540, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.532882011605416, 0.843642611683849 }, },
+				Size = Input { Value = 0.06, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "This is the hidden layer. The radius of\neach neuron is mapped to its activation level ", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 6149.14, 292.626 } },
+		},
+		Merge99_1_1_1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge101",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text35_1_1_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6151.53, 245.002 } },
+		},
+		Merge102 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge99_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Loader38",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6255.11, 191.425 } },
+		},
+		Text35_1_1_1_1 = TextPlus {
+			ExtentSet = true,
+			Inputs = {
+				GlobalIn = Input { Value = 8570, },
+				GlobalOut = Input { Value = 8770, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input { Value = { 0.532882011605416, 0.276632302405498 }, },
+				Size = Input { Value = 0.06, },
+				Font = Input { Value = "Arial", },
+				StyledText = Input { Value = "These are the synapses to the ouput layer,\ntheir weights are multiplied by the hidden\nlayer activation values", },
+				Style = Input { Value = "Bold", },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[1] = { 1, 1, 1, 1 }
+						}
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 6259.87, 312.867 } },
+		},
+		Merge99_1_1_1_1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge102",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text35_1_1_1_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6261.06, 239.049 } },
+		},
+		Merge103 = Merge {
+			CtrlWZoom = false,
+			Inputs = {
+				Background = Input {
+					SourceOp = "Merge99_1_1_1_1",
+					Source = "Output",
+				},
+				ApplyMode = Input { Value = FuID { "Screen" }, },
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 6376.55, 193.806 } },
 		}
 	},
 	Views = {
@@ -5002,7 +5687,7 @@ Composition {
 						Direction = "Horizontal",
 						PipeStyle = "Direct",
 						Scale = 0.839908,
-						Offset = { -4919.26, -54.5047 }
+						Offset = { -5888.4, -74.7454 }
 					},
 					Timeline = TimelineView {
 						TreeControlState = {
@@ -5115,7 +5800,7 @@ Composition {
 				}
 			},
 			Unsorted = {
-				GlobalEnd = 7000,
+				GlobalEnd = 10000,
 				RenderSettings = {
 					Configs = {
 						Final = {
@@ -5150,6 +5835,9 @@ Composition {
 					PreviewConfig = "Preview",
 					CurrentConfig = "Final"
 				}
+			},
+			Audio = {
+				Playback = false
 			},
 			Paths = {
 			},
