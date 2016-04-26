@@ -2,3 +2,4 @@ training_images
 imagenet_sample
 shapes
 images
+*.png
