@@ -1,0 +1,15 @@
+#!/bin/bash
+
+N_IMAGES=500
+
+# echo each element in array 
+# for loop
+for (( i=0;i<$N_IMAGES;i++)); do
+
+	r=$(printf "%0*d" 4 $i)
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=3 -o triangle$r.png
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=4 -o square$r.png
+	openscad  shapegen.scad --camera=0,0,0,0,0,0,140 --imgsize=100,100 --colorscheme=Nature -D n=128 -o circle$r.png
+	
+	
+done

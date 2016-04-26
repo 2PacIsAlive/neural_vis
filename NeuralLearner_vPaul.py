@@ -35,11 +35,10 @@ net = NeuralLearner()
 accuracy = net.Fit()
 print "TRAINING"
 for i in range(len(accuracy)):
-	print accuracy[i], net.training_expected[i]
+	if accuracy[i] != net.training_expected[i]: errors += 1
 print "TESTING"
 guess = net.Predict()
 for i in range(len(guess)):
-	print guess[i], net.testing_expected[i]
 	if guess[i] == net.testing_expected[i]:
 		corr+=1
 saveScores(float(corr/len(guess)))
